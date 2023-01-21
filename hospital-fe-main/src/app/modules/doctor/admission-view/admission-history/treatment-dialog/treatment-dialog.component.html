@@ -1,0 +1,21 @@
+<div class="container mt-5 ml-5" >
+    <h2><b><p>Medical report</p></b></h2>
+    <div class="container mt-5">
+        <h1><p [innerText]="admission.patient.name + ' ' + admission.patient.surname"></p></h1>
+        <b><label>Admission date :</label></b>
+        <p [innerText]="admission.arrivalDate | date : 'dd.MM.yyyy'"></p>
+
+        <b><label>Admission reason :</label></b>
+        <p [innerText]="admission.reasonText.text"></p>
+    </div>
+    <div class="container mt-5">
+        <b><label>Discharge date :</label></b>
+        <p [innerText]="admissionHistory.dischargeDate | date : 'dd.MM.yyyy'"></p>
+        <b><label>Discharge reason:</label></b>
+        <p [innerText]="admissionHistory.dischargeReason"></p>
+    </div>
+
+    <div class="container text-center">
+        <button mat-flat-button color="primary" (click)="generatePdf(admissionHistory.Id)">Generate PDF</button>
+    </div>
+    </div>

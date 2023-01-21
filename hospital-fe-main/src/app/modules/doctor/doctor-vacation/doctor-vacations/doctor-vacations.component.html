@@ -1,0 +1,12 @@
+<div class="container">
+    <button class="m-4" mat-raised-button color="accent" matTooltip="New vacation" (click)="openAddDialog()">
+        <mat-icon>add_circle</mat-icon>
+        New vacation
+    </button>
+    
+    <mat-tab-group>
+        <mat-tab label="Current vacation requests"><app-vacation-scheduler whatVacationIs='now'></app-vacation-scheduler></mat-tab>
+        <mat-tab label="Denien vacation requests"><app-vacation-scheduler whatVacationIs="denied"></app-vacation-scheduler></mat-tab>
+        <mat-tab label="Accepted vacation requests"><app-vacation-scheduler whatVacationIs="past"></app-vacation-scheduler></mat-tab>
+    </mat-tab-group>
+  </div>

@@ -1,0 +1,20 @@
+<h1><p>Choose fields you want in PDF report</p></h1>
+<div class="ml-5" style="text-align: left;">
+    <section>
+        <mat-checkbox class="example-margin"[(ngModel)]="isCheckedInfo"><h2>Patient info</h2></mat-checkbox>
+    </section>
+    <section>
+        <mat-checkbox class="example-margin"[(ngModel)]="isCheckedDiag"><h2>Diagnosis</h2></mat-checkbox>
+    </section>
+    <section>
+        <mat-checkbox class="example-margin"[(ngModel)]="isCheckedDrugs"><h2>Medicines</h2></mat-checkbox>
+    </section>
+    <section>
+        <mat-checkbox class="example-margin"[(ngModel)]="isCheckedSymptoms"><h2>Symptoms</h2></mat-checkbox>
+    </section>
+</div>
+
+<div style="text-align: center;">
+    <button mat-raised-button color="primary" matTooltip="Generisi" (click)="generatePdf()">
+        Generate PDF</button>
+</div>

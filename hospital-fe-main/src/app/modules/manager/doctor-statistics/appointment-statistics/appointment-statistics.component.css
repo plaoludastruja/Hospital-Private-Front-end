@@ -1,0 +1,25 @@
+.appointment-chart{
+    text-align:center;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+
+.header {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: #e3e2d4;
+    text-align: center;
+  }
+
+  .select{
+    background-color:#e3e2d4;
+}
+
+.selectParent{
+    color: #192830;
+    margin-left: 2%;
+    margin-right: 2%;
+}

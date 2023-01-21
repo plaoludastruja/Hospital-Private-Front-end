@@ -1,0 +1,46 @@
+<mat-card style="background-color: #192830;">
+    <mat-card-content>
+        <mat-tab-group mat-align-tabs="center" style="background-color: #2e4450">
+            <mat-tab label="Room search" >
+                <mat-form-field appearance="fill" style="width: 100%; background-color: #2e4450;">
+                    <mat-label style="color: #89dee2">Room Name</mat-label>
+                    <input type="tel" style="color: #89dee2" matInput placeholder="Search" name= "searchRoom" [(ngModel)]="searchText">
+                </mat-form-field>
+                <table class="styled-table" id="searchNameTable">
+                    <thead>
+                        <th>Name
+                        </th>
+                        <th>Number
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let room of maps$  | filter:searchText" (click)="highlight(room)" >
+                            <td>{{ room.room.name }}</td>
+                            <td>{{ room.room.number }}</td>
+                          </tr>
+                    </tbody>    
+                  </table>
+            </mat-tab>
+            <mat-tab  label="Equipment search">
+                <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label style="color: #89dee2">Equipment name</mat-label>
+                    <input style="color: #89dee2" type="search" matInput placeholder="Search" name= "searchEquipment" [(ngModel)]="searchText">
+                </mat-form-field>
+                <table class="styled-table">
+                    <thead>
+                        <th>Name
+                        </th>
+                        <th>Number
+                        </th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let room of maps$  | filterequipment:searchText" (click)="highlight(room)">
+                            <td>{{ room.room.name }}</td>
+                            <td>{{ room.room.number }}</td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,42 @@
+.grid {
+  width: 80%;
+  margin: auto;
+  color: #192830;
+}
+
+mat-grid-tile {
+  background-color: white;
+}
+
+.header {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: #192830;
+  text-align: center;
+}
+
+#test {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  margin: 3%;
+}
+
+#test td,
+#test th {
+  border: 1px solid #192830;
+  padding: 8px;
+}
+
+#test th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #192830;
+  color: white;
+}
+
+.cell {
+  padding: 5%;
+}

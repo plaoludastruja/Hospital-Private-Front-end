@@ -1,0 +1,8 @@
+<h1 mat-dialog-title>Confirm</h1>
+<div mat-dialog-content *ngIf="!data.isEdit">Are you sure that you want to schedule appointment? </div>
+<div mat-dialog-content *ngIf="data.isEdit">Are you sure that you want to reschedule appointment? </div>
+<div mat-dialog-actions>
+    <button class="m-1" mat-button *ngIf="!data.isEdit" (click)="scheduleAppointment()" id="finishAddBtn">Yes</button>
+    <button class="m-1" mat-button *ngIf="data.isEdit" (click)="rescheduleAppointment()" id="finishBtn">Yes</button>
+    <button class="m-1" mat-button mat-dialog-close>No</button>
+</div>
